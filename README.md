@@ -14,3 +14,4 @@ Soft gradients, scenic imagery, and thoughtful spacing create a premium SaaS aes
 ## 🚀 Features
 
 - 📱 **Fully Responsive** — Adapted for desktop, tablet, and mobile screens.
+- ✨ **Scroll Reveal** — Sections animate into view as users scroll through the page.
