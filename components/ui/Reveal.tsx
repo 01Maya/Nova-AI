@@ -111,7 +111,12 @@ export function SplitText({ text, as = "h2", className }: SplitTextProps) {
   return (
     <>
       <style href="ov-reveal" precedence="default">{css}</style>
-      <Tag ref={ref} className={cx("reveal-split", seen && "reveal-in", className)}>
+      <Tag
+        ref={(element: HTMLElement | null) => {
+          ref.current = element;
+        }}
+        className={cx("reveal-split", seen && "reveal-in", className)}
+      >
         {text.split("\n").map((line, lineIndex) => (
           <Fragment key={lineIndex}>
             {lineIndex > 0 && <br />}

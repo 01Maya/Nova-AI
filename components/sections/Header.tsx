@@ -139,7 +139,12 @@ const css = `.header {
   }
 }`;
 
-const content = {
+const content: {
+  logoLabel: string;
+  links: { label: string; href: string; chevron?: boolean }[];
+  login: string;
+  cta: string;
+} = {
   logoLabel: "NOVA AI home",
   links: [
     { label: "Features", href: "#features" },
