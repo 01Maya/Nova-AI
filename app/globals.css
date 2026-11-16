@@ -1,0 +1,134 @@
+/* Global only: design tokens, reset, base elements and tiny shared utilities.
+   Component styles live in the *.module.css file next to each component. */
+
+:root {
+  /* color */
+  --bg: #fff;
+  --ink: #0d0d0f;
+  --mute: #6b6b73;
+  --dim: #8a8a92;
+  --soft: #f6f6f7;
+  --line: #ececee;
+  --pink: #f6b6d8;
+  --violet: #c9a8f5;
+  --blue: #a9c8ff;
+  --accent: #7a5af8;
+
+  /* shape + motion */
+  --r-lg: 28px;
+  --r-md: 18px;
+  --r-sm: 12px;
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  /* type scale (nothing below 14px) */
+  --font: var(--font-inter-tight), system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  --fs-xs: 14px;
+  --fs-sm: 16px;
+  --fs-md: 18px;
+  --fs-lg: clamp(18px, 2vw, 20px);
+  --fs-h3: clamp(24px, 3vw, 32px);
+  --fs-h2: clamp(32px, 4.4vw, 48px);
+  --fs-h1: clamp(40px, 6.6vw, 72px);
+  --fs-stat: clamp(40px, 4.6vw, 52px);
+  --fs-xl: clamp(48px, 8vw, 72px);
+
+  /* layout */
+  --wrap: min(1040px, calc(100% - clamp(32px, 6vw, 64px)));
+  --sec: clamp(56px, 8vw, 112px);
+}
+
+/* reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: clamp(72px, 9vw, 90px);
+}
+
+body {
+  overflow-x: hidden;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: var(--fs-sm);
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+}
+
+main,
+footer {
+  overflow-x: clip;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 1.06;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+/* shared utilities */
+.wrap {
+  width: var(--wrap);
+  margin-inline: auto;
+}
+
+.sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.skip {
+  position: absolute;
+  top: -64px;
+  left: 12px;
+  z-index: 100;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  transition: top 0.25s;
+}
+
+.skip:focus {
+  top: 12px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

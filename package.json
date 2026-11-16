@@ -1,0 +1,30 @@
+{
+  "name": "optiv-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "```bash npm install npm run dev      # http://localhost:3000 npm run build && npm start ```",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^16.4.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "postcss": "^8.5.32",
+    "typescript": "^5.6.0"
+  }
+}
