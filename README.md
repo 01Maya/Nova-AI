@@ -10,3 +10,5 @@ This landing page combines a minimal visual style with smooth motion, interactiv
 moves smoothly between page sections.
 
 Soft gradients, scenic imagery, and thoughtful spacing create a premium SaaS aesthetic, while the responsive layout keeps the experience consistent across desktop, tablet, and mobile devices.
+
+## 🚀 Features
