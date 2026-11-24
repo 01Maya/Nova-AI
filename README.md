@@ -16,3 +16,4 @@ Soft gradients, scenic imagery, and thoughtful spacing create a premium SaaS aes
 - 📱 **Fully Responsive** — Adapted for desktop, tablet, and mobile screens.
 - ✨ **Scroll Reveal** — Sections animate into view as users scroll through the page.
 - 🔤 **Word Reveal** — Headings appear with staggered word-by-word animations.
+- 🧲 **Magnetic Buttons** — Interactive buttons respond subtly to pointer movement.
